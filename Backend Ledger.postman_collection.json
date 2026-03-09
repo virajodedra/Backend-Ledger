@@ -1,0 +1,277 @@
+{
+  "info": {
+    "_postman_id": "69201ea1-17f9-4572-afd8-1b414ec7ce9f",
+    "name": "Backend Ledger",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "45709614",
+    "_collection_link": "https://go.postman.co/collection/45709614-69201ea1-17f9-4572-afd8-1b414ec7ce9f?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\" : \"vk\",\r\n    \"email\":\"vk4089333@gmail.com\",\r\n    \"password\":\"vkVK@@04\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/auth/register",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logout The User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\" : \"vk\",\r\n    \"email\":\"vk4089333@gmail.com\",\r\n    \"password\":\"vkVK@@04\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/auth/logout",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\" : \"SYSTEM\",\r\n    \"email\":\"system@test.com\",\r\n    \"password\":\"systeM$$04\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/auth/login",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Accounts",
+      "item": [
+        {
+          "name": "Create Account",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/accounts/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "accounts",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Accounts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/accounts",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "accounts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User Account By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/accounts/user/69ac0bbe4c77d1e00691a94a",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "accounts",
+                "user",
+                "69ac0bbe4c77d1e00691a94a"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "transaction - FROM SYSTEM USER",
+      "item": [
+        {
+          "name": "Initial Funds",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"toAccount\" : \"69ac0bbe4c77d1e00691a94a\",\r\n    \"amount\":50000,\r\n    \"idempotencyKey\":\"019cd12b-3de9-7d67-8800-f3fee1b9bf5c\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/transactions/system/initial-funds",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "transactions",
+                "system",
+                "initial-funds"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Transfer The Amount From One User to The Another User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fromAccount\":\"69ac0bbe4c77d1e00691a94a\",\r\n    \"toAccount\":\"69a6a3b1173e7c5577a9fed2\",\r\n    \"amount\":\"30000\",\r\n    \"idempotencyKey\":\"019cd262-57d4-7768-ae1e-09e70bb3c0b3\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/transactions/",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "transactions",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Transfer The Money From One Account to Another Account",
+      "item": [
+        {
+          "name": "Transfer The Amount From One User to The Another User Copy",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fromAccount\":\"69ac0bbe4c77d1e00691a94a\",\r\n    \"toAccount\":\"69a6a3b1173e7c5577a9fed2\",\r\n    \"amount\":\"30000\",\r\n    \"idempotencyKey\":\"019cd262-57d4-7768-ae1e-09e70bb3c0b3\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/transactions/",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "transactions",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
