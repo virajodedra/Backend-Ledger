@@ -9,6 +9,13 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 /**
+ * for testing purpose only
+ */
+app.get("/", (req, res) => {
+  res.send("Welcome to the Ledger API");
+});
+
+/**
  *
  * - Routes Required
  */

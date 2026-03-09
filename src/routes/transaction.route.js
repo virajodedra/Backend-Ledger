@@ -26,10 +26,4 @@ router.post(
   transactionController.createInitialFundsTransaction,
 );
 
-/**
- *
- * GET /api/accounts
- * - Get all the accounts of the logged in user
- */
-
 export default router;
