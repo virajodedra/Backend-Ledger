@@ -2,11 +2,16 @@
 
 A secure, production-ready **double-entry ledger & payment backend** built with Node.js, Express, and MongoDB. It supports user authentication, account management, fund transfers with idempotency protection, and email notifications — all backed by ACID-compliant MongoDB transactions.
 
+[![CI](https://github.com/virajodedra/Backend-Ledger/actions/workflows/ci.yml/badge.svg)](https://github.com/virajodedra/Backend-Ledger/actions/workflows/ci.yml)
+[![Postman](https://img.shields.io/badge/Postman-Docs-orange?logo=postman)](https://volt-3508613.postman.co/workspace/Product-Store~7a1c9e2d-2e69-491b-870d-761872e7ed24/collection/45709614-69201ea1-17f9-4572-afd8-1b414ec7ce9f?action=share&source=copy-link&creator=45709614)
+[![Live](https://img.shields.io/badge/Live%20API-Render-46E3B7?logo=render)](https://backend-ledger-phed.onrender.com/)
+
 ---
 
-## 🔗 API Documentation
+## 🔗 Links
 
-[![Postman](https://img.shields.io/badge/Postman-Docs-orange?logo=postman)](https://volt-3508613.postman.co/workspace/Product-Store~7a1c9e2d-2e69-491b-870d-761872e7ed24/collection/45709614-69201ea1-17f9-4572-afd8-1b414ec7ce9f?action=share&source=copy-link&creator=45709614)
+- 🚀 **Live API:** [https://backend-ledger-phed.onrender.com](https://backend-ledger-phed.onrender.com)
+- 📬 **Postman Docs:** [View Collection](https://volt-3508613.postman.co/workspace/Product-Store~7a1c9e2d-2e69-491b-870d-761872e7ed24/collection/45709614-69201ea1-17f9-4572-afd8-1b414ec7ce9f?action=share&source=copy-link&creator=45709614)
 
 ---
 
